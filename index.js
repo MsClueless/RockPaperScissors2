@@ -26,22 +26,32 @@ function determineWinner (userChoice, computerChoice) {
         if (computerChoice === "paper") {
             return "The computer wins!"
         } else {
-            return "The user wins!"
+            return "You win!"
         }
     };
     if (userChoice === "paper") {
         if (computerChoice === "scissors") {
             return "The computer wins!"
         } else {
-            return "The user wins!"
+            return "You win!"
         }
     };
     if (userChoice = "scissors") {
         if (computerChoice === "rock") {
             return "The computer wins!"
         } else {
-            return "The user wins!"
+            return "You win!"
         }
     }
 
 }
+
+function playGame() {
+    let userChoice = getUserChoice();
+    let computerChoice = getComputerChoice();
+    console.log("You threw: " + userChoice);
+    console.log("The computer threw: " + computerChoice);
+    console.log(determineWinner(userChoice, computerChoice));
+
+}
+playGame();
